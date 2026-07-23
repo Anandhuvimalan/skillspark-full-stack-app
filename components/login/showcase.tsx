@@ -52,90 +52,95 @@ export function LoginShowcase() {
       <div className="absolute inset-0 grid place-items-center p-10">
         <div className="relative h-[380px] w-[380px]">
           {/* Course card — the LMS */}
-          <div
-            className="showcard showcard-a absolute left-0 top-6 w-[298px] rounded-lg bg-white p-3 shadow-[0_30px_60px_-20px_rgba(2,20,20,0.55)]"
-            style={{ ["--rot" as string]: "-4deg" }}
-          >
+          <div className="showfloat showfloat-a absolute left-0 top-6 w-[298px]">
             <div
-              className="relative grid aspect-[16/9] place-items-center overflow-hidden rounded-xl"
-              style={{ background: "linear-gradient(135deg, #0f766e, #0b3a38)" }}
+              className="showtilt w-full rounded-lg bg-white p-3 shadow-[0_30px_60px_-20px_rgba(2,20,20,0.55)]"
+              style={{ ["--rot" as string]: "-4deg" }}
             >
-              <Play />
-              <span className="absolute bottom-2 right-2 rounded bg-black/35 px-1.5 py-0.5 font-mono text-[11px] text-white/90">
-                12:04
-              </span>
-            </div>
-            <div className="px-1 pb-1 pt-3">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-teal-700">
-                Course
-              </p>
-              <p className="mt-1 text-[15px] font-semibold leading-tight text-slate-900">
-                Financial Accounting
-              </p>
-              <p className="mt-0.5 text-[12px] text-slate-500">Module 2 · Journal Entries</p>
-              <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-slate-100">
-                <div className="h-full w-[52%] rounded-full bg-teal-600" />
+              <div
+                className="relative grid aspect-[16/9] place-items-center overflow-hidden rounded-xl"
+                style={{ background: "linear-gradient(135deg, #0f766e, #0b3a38)" }}
+              >
+                <Play />
+                <span className="absolute bottom-2 right-2 rounded bg-black/35 px-1.5 py-0.5 font-mono text-[11px] text-white/90">
+                  12:04
+                </span>
               </div>
-              <p className="mt-1.5 font-mono text-[11px] text-slate-400">6 / 12 lessons</p>
+              <div className="px-1 pb-1 pt-3">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-teal-700">
+                  Course
+                </p>
+                <p className="mt-1 text-[15px] font-semibold leading-tight text-slate-900">
+                  Financial Accounting
+                </p>
+                <p className="mt-0.5 text-[12px] text-slate-500">Module 2 · Journal Entries</p>
+                <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-slate-100">
+                  <div className="h-full w-[52%] rounded-full bg-teal-600" />
+                </div>
+                <p className="mt-1.5 font-mono text-[11px] text-slate-400">6 / 12 lessons</p>
+              </div>
             </div>
           </div>
 
           {/* Score card — the JET exam */}
-          <div
-            className="showcard showcard-b absolute right-0 top-[176px] w-[186px] rounded-lg bg-white p-4 shadow-[0_26px_50px_-18px_rgba(2,20,20,0.5)]"
-            style={{ ["--rot" as string]: "5deg" }}
-          >
-            <div className="flex items-center gap-1.5">
-              <Spark className="h-3.5 w-3.5 text-teal-500" />
-              <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-teal-700">
-                JET Exam
+          <div className="showfloat showfloat-b absolute right-0 top-[176px] w-[186px]">
+            <div
+              className="showtilt w-full rounded-lg bg-white p-4 shadow-[0_26px_50px_-18px_rgba(2,20,20,0.5)]"
+              style={{ ["--rot" as string]: "5deg" }}
+            >
+              <div className="flex items-center gap-1.5">
+                <Spark className="h-3.5 w-3.5 text-teal-500" />
+                <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-teal-700">
+                  JET Exam
+                </p>
+              </div>
+              <p className="mt-2 font-mono text-[2.6rem] font-medium leading-none tracking-tight text-slate-900">
+                92<span className="text-slate-400">%</span>
               </p>
+              <span className="mt-3 inline-flex rounded-full bg-teal-600/12 px-2.5 py-1 text-[11px] font-medium text-teal-700">
+                Excellent
+              </span>
             </div>
-            <p className="mt-2 font-mono text-[2.6rem] font-medium leading-none tracking-tight text-slate-900">
-              92<span className="text-slate-400">%</span>
-            </p>
-            <span className="mt-3 inline-flex rounded-full bg-teal-600/12 px-2.5 py-1 text-[11px] font-medium text-teal-700">
-              Excellent
-            </span>
           </div>
 
           {/* Streak chip — the accent */}
-          <div
-            className="showcard showcard-c absolute bottom-3 left-10 inline-flex items-center gap-2 rounded-full bg-white px-3.5 py-2 shadow-[0_18px_36px_-14px_rgba(2,20,20,0.5)]"
-            style={{ ["--rot" as string]: "-2deg" }}
-          >
-            <Spark className="h-4 w-4 text-teal-500" />
-            <span className="text-[12px] font-medium text-slate-700">
-              <span className="font-mono">12</span>-day streak
-            </span>
+          <div className="showfloat showfloat-c absolute bottom-3 left-10">
+            <div
+              className="showtilt inline-flex items-center gap-2 rounded-full bg-white px-3.5 py-2 shadow-[0_18px_36px_-14px_rgba(2,20,20,0.5)]"
+              style={{ ["--rot" as string]: "-2deg" }}
+            >
+              <Spark className="h-4 w-4 text-teal-500" />
+              <span className="text-[12px] font-medium text-slate-700">
+                <span className="font-mono">12</span>-day streak
+              </span>
+            </div>
           </div>
         </div>
       </div>
 
       <style>{`
-        .showcard {
-          transform: rotate(var(--rot));
-          /* Own compositor layer: the rotated card rasterizes once, so the
-             float composites cleanly instead of re-rendering every frame
-             (that per-frame re-raster is the "ripple"/mirage shimmer). */
-          will-change: transform;
-          backface-visibility: hidden;
-          animation: showcardIn 700ms var(--ease-out-standard) both, showFloat 8s ease-in-out infinite;
+        /* Outer element: fades in, then floats by TRANSLATE ONLY. Pure
+           vertical translation of a compositor layer never resamples the
+           texture, so no edge fringe. The rotation lives on the inner
+           element and is baked into the paint (crisp geometry AA). */
+        .showfloat {
+          animation: showFadeIn 700ms var(--ease-out-standard) both, showFloat 8s ease-in-out infinite;
         }
-        .showcard-b { animation-delay: 120ms, 1.4s; }
-        .showcard-c { animation-delay: 240ms, 0.6s; }
-        @keyframes showcardIn {
+        .showfloat-b { animation-delay: 120ms, 1.4s; }
+        .showfloat-c { animation-delay: 240ms, 0.6s; }
+        /* Inner element: static tilt, painted once — edges stay sharp. */
+        .showtilt { transform: rotate(var(--rot)); }
+        @keyframes showFadeIn {
           from { opacity: 0; }
           to   { opacity: 1; }
         }
         @keyframes showFloat {
-          0%, 100% { transform: rotate(var(--rot)) translateY(0); }
-          50%      { transform: rotate(var(--rot)) translateY(-10px); }
+          0%, 100% { transform: translateY(0); }
+          50%      { transform: translateY(-10px); }
         }
         @media (prefers-reduced-motion: reduce) {
-          .showcard {
-            animation: showcardIn 700ms var(--ease-out-standard) both;
-            will-change: auto;
+          .showfloat {
+            animation: showFadeIn 700ms var(--ease-out-standard) both;
           }
         }
       `}</style>
