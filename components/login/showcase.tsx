@@ -115,6 +115,11 @@ export function LoginShowcase() {
       <style>{`
         .showcard {
           transform: rotate(var(--rot));
+          /* Own compositor layer: the rotated card rasterizes once, so the
+             float composites cleanly instead of re-rendering every frame
+             (that per-frame re-raster is the "ripple"/mirage shimmer). */
+          will-change: transform;
+          backface-visibility: hidden;
           animation: showcardIn 700ms var(--ease-out-standard) both, showFloat 8s ease-in-out infinite;
         }
         .showcard-b { animation-delay: 120ms, 1.4s; }
@@ -126,6 +131,12 @@ export function LoginShowcase() {
         @keyframes showFloat {
           0%, 100% { transform: rotate(var(--rot)) translateY(0); }
           50%      { transform: rotate(var(--rot)) translateY(-10px); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .showcard {
+            animation: showcardIn 700ms var(--ease-out-standard) both;
+            will-change: auto;
+          }
         }
       `}</style>
     </div>

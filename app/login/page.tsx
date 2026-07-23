@@ -59,8 +59,8 @@ export default async function LoginPage(props: PageProps<"/login">) {
               Learn it. Practise it. <span className="text-accent">Prove it.</span>
             </h1>
             <p className="mt-4 text-[0.975rem] leading-relaxed text-fg-muted">
-              Your video courses, study materials, and the JET accounting exam — together in one
-              account.
+              Watch your course videos, open your study materials, and take the JET accounting exam,
+              all in one place.
             </p>
 
             <form
